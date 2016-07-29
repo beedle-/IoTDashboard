@@ -1,5 +1,7 @@
 # IoTDashboard
 
+This work was realized as a bachelor thesis at School of Management and Engineering Vaud (HEIG-VD - Haute Ecole d'Ingénierie et de Gestion du Canton de Vaud).
+
 ## Abstract
 
 Large amounts of data can be collected through sensors from the real world, thus constituting the Internet

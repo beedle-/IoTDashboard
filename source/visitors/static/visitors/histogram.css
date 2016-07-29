@@ -1,0 +1,73 @@
+   svg {
+       font: 10px sans-serif;
+   }
+   .focusBackground {
+       fill: white;
+   }
+   .snapshot {
+       opacity: 0.2;
+       fill-opacity: .2;
+   }
+   .daily {
+       fill: steelblue;
+   }
+   .max {
+       fill: none;
+       stroke: #f00;
+   }
+   .mean {
+       stroke: blue;
+       fill: steelblue;
+   }
+   .min {
+       fill: none;
+       stroke: #0f0;
+   }
+   .sd {
+       fill: none;
+       stroke: #ff0;
+   }
+   .axis path, .axis line {
+       fill: none;
+       stroke: #000;
+       shape-rendering: crispEdges;
+   }
+   .brush .extent {
+       stroke: #fff;
+       fill-opacity: .125;
+       shape-rendering: crispEdges;
+   }
+   .brushSnapshot {
+       stroke: #999;
+       stroke-dasharray: 5, 5;
+       shape-rendering: crispEdges;
+   }
+   .barLabels {
+       fill: #fff;
+   }
+   .area {
+       fill: steelblue;
+   }
+   .bar rect {
+       fill: steelblue;
+       shape-rendering: crispEdges;
+   }
+   .snapshotBar {
+       fill: red;
+       fill-opacity: .4;
+   }
+   .snapshotBarPeak rect {
+       shape-rendering: crispEdges;
+       stroke: #f00;
+       fill: red;
+       fill-opacity: .2;
+   }
+   .active rect {
+       fill: orange;
+   }
+   .bar black {
+       fill: #000;
+   }
+   #csvdata {
+       display: none;
+   }

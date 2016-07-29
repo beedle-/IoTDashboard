@@ -1,0 +1,97 @@
+{% load staticfiles %}
+
+<head>
+{#    add #}
+    <link rel="shortcut icon" href="{%  static 'visitors/favicon.ico' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'visitors/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'visitors/scripts/leaflet/leaflet.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'visitors/histogram.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'visitors/dc.css' %}" />
+</head>
+<body>
+
+    <div id="mapid"></div>
+
+
+    <div id="crossfiltersControls">
+        <div id="sliders">
+            <!-- Histogram slider day by day -->
+            <div id="timeSlider">
+                Time interval
+                <div id="chart-line-hitsperday"></div>
+            </div>
+
+            <!-- Histogram slider hour by hour -->
+            <div id="timeSliderFineGrained">
+                Time interval, fine-grained
+                <div id="chart-line-hitsperhour"></div>
+            </div>
+
+            <div><input id="selectSpeed" type="checkbox" name="speed"> Filter by speed</div>
+            <!-- Histogram slider speed -->
+            <div id="chart-line-hitsperspeed"></div>
+
+            <div id = "controlPanel">
+                <div id="selectType">
+                    <b> Select the displayed sensor :</b>
+                    <table>
+                        <tr>
+                            <td><input id="all" type="radio" name="sensorType" checked="checked" > All Sensors</td>
+                            <td><span id="all" class="countSensor"></span></td>
+                            <td width="200px"><div id="all" class="sensorBar"></div></td>
+                        </tr>
+                        <tr>
+                            <td><input id="Android" type="radio" name="sensorType">Android</td>
+                            <td><span id="Android" class="countSensor"></span></td>
+                            <td width="200px"><div id="Android" class="sensorBar"></div></td>
+                        </tr>
+                        <tr>
+                            <td><input id="iOS" type="radio" name="sensorType"> iOS</td>
+                            <td><span id="iOS" class="countSensor"></span></td>
+                            <td width="200px"><div id="iOS" class="sensorBar"></div></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <img src="{% static 'visitors/loading.gif' %}" id="img_loading"/>
+    </div>
+
+    <table width="60%" style="float: left;">
+        <tr>
+            <td width="20%">
+                <div id="sizeChart"> </div>
+            </td>
+            <td style="padding-left:10px;" width="80%">
+                <div id="predictionDB">
+                    <p id="selectedMeasurements"></p>
+                    <p id="predictionResult"></p>
+                    Predictions based on the last  :
+                            <input id="30 minutes" type="radio" name="predictionMin"> 30 minutes &nbsp;
+                            <input id="8 hours" type="radio" name="predictionMin"> 8 hours &nbsp;
+                            <input id="1 day" type="radio" name="predictionMin"> 1 day &nbsp;
+                            <input id="3 days" type="radio" name="predictionMin"> 3 days &nbsp;
+                            <input id="1 week" type="radio" name="predictionMin" checked="checked"> 1 week &nbsp;
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div id="secondMap"></div>
+
+
+    <div id ="bigSecondMap"></div>
+
+    <!-- Importing Javascript -->
+{#    add#}
+    <script src="{% static 'visitors/scripts/leaflet/leaflet.js' %}" charset="utf-8"></script>
+    <script src="{% static 'visitors/scripts/leaflet-heat.js' %}" charset="utf-8"></script>
+    <script src="{% static 'visitors/scripts/d3/d3.min.js' %}" charset="utf-8"></script>
+    <script src="{% static 'visitors/scripts/crossfilter.js' %}" charset="utf-8"></script>
+    <script src="{% static 'visitors/scripts/dc.js' %}" charset="utf-8"></script>
+    <script src="{% static 'visitors/scripts/humanize.min.js' %}" charset="utf-8"></script>
+    <script src="{% static 'visitors/scripts/main.js' %}"></script>
+
+</body>

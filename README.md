@@ -24,3 +24,15 @@ the load between server and client. The user is able to interactively explore th
 (smart controllers), such as sliders on top of histograms that represent the distribution of the data.
 
 ![Interface](interface.png)
+
+### Crossfilter
+
+![Crossfilter](crossfilter.png)
+
+### Human readability
+
+![Human readability](human_readable.png)
+
+### Dynamic clustering
+
+![Dynamic clustering](dynamic.png)
